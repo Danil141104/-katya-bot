@@ -11,8 +11,9 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 logging.basicConfig(level=logging.INFO)
 
 # ── Вставь сюда свои данные ──────────────────────────────────────────────────
-BOT_TOKEN  = "8630526139:AAF-4eKdQ1Gm29Fn-VZlgJqZbAvfLWYc4Tw"
-GAME_URL = "https://heroic-paprenjak-85bc27.netlify.app"
+import os
+BOT_TOKEN = os.environ["BOT_TOKEN"]
+GAME_URL   = os.environ["GAME_URL"]
 # ─────────────────────────────────────────────────────────────────────────────
 
 async def start(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
